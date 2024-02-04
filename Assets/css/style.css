@@ -1,0 +1,290 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+  }
+
+  :root {
+    --white-color: #fff;
+    --green-color:#99E2D0;
+    --green-font-color:#008766;
+    --primary-color: #9356DC;
+    --main-text-color: #353535;
+    --main-bg-color: #F6F6F6;
+    --grey-color: #EAEAEA;
+    --filter-bg-color: #DEEBFF;
+    --gradient:linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  }
+
+/* Global */
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 10px;
+  }
+
+/* Header */
+  .header {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .header__h1 {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    background-color: white;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  .header__subtitleAndIcon {
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey-color);
+    padding: 20px 0 20px 0;
+  }
+
+  .header__subtitleAndIcon i {
+    color: var(--main-text-color);
+    padding-right: 10px;
+  }
+
+  .header__subtitleAndIcon p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--main-text-color);
+  }
+
+  /* Booking */
+
+  .booking {
+    background-color: var(--main-bg-color);
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .booking__title {
+    text-align: center;
+  }
+  .booking__text {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--main-text-color);
+    text-align: center;
+  }
+  .booking__link {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+  .booking__link--button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--gradient);
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    position: relative;
+  }
+
+  .booking__link--button:hover::after {
+    opacity: 0.20;
+  }
+
+  .booking__link--button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 25px;
+    transition: opacity 1s, box-shadow 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
+   
+/* Operation */
+
+.operation {
+  margin-top: 40px;
+  padding-left: 17px;
+  height:350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.operation h2 {
+  margin-bottom: 10px;
+}
+
+.operation__area{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 14px;
+  width: 335px;
+  height: 72px;
+  position: relative;
+}
+
+.operation__area > p {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left:7px;
+  font-weight: 500;
+}
+
+.operation__area--content{
+  display: flex;
+  background-color: var(--main-bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 20px;
+  width: 322px;
+  height: 100%;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow:  0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.operation__area--content > i {
+  padding-right: 20px;
+  padding-left: 30px;
+  color: #7E7E7E;
+}
+
+.operation__area--content .fa-store {
+  color :var(--primary-color)
+}
+
+
+/* Restaurant */
+.restaurant {
+  padding: 40px 17px 40px 17px;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant h2 {
+  padding-bottom: 20px;
+}
+
+.restaurant__cardArticle {
+  display: flex;
+  flex-direction: column;
+  height:251px;
+  margin-bottom: 18px;
+}
+
+.restaurant__cardArticle--img {
+  height: 170px;
+  position: relative;
+}
+
+.restaurant__cardArticle--img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurant__cardArticle--img p {
+  position: absolute;
+  color:var(--green-font-color);
+  background-color: var(--green-color);
+  font-weight: 500;
+  padding: 7px;
+  top:20px; 
+  right: 10px;
+  border-radius: 2px;
+  box-shadow:  0px 2px 4px rgba(0, 0, 0, 0.15)
+}
+
+.restaurant__cardArticle--bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 18px 20px 15px 10px;
+  border-radius: 0 0 15px 15px;
+  line-height: 1.5rem;
+  max-height: 78px;
+  box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.restaurant__cardArticle--bottom i {
+  font-size: 22px;
+}
+
+
+.restaurant__cardArticle--bottom h3 {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.restaurant__cardArticle--bottom p {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--main-text-color);
+  color: var(--white-color);
+  padding: 20px 0 30px 17px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.footer a {
+  color: var(--white-color);
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.footer h1 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.footer__icon  {
+  display: flex;
+}
+
+.footer__icon a {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.footer__icon i {
+  width: 10px;
+  height: 13px;
+  padding-right: 15px ;
+}

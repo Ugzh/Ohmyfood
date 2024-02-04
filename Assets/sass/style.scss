@@ -1,0 +1,98 @@
+// @mixin subtitle-style($font-roboto-size, $font-weight,$font-color) {
+//     font-family: $font-text;
+//     font-weight: $font-weight;
+//     font-size: $font-roboto-size;
+//     color: $font-color;
+// }
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #F6F6F6;
+    text-decoration: none;
+}
+
+$font-title: 'Shrikhand', sans-serif;
+$font-text: 'Roboto', sans-serif;
+$font-roboto-size: 15.04px;
+$font-title-size: 30px;
+$font-weight: 400;
+$font-color: black;
+$background-color: #EAEAEA;
+$main-color: #353535;
+
+
+@mixin button-style {
+    background: linear-gradient(90deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-style($font-roboto-size, $font-weight,$font-color) {
+    font-family: $font-text;
+    font-size: $font-roboto-size;
+    font-weight: $font-weight;
+    color: $font-color;
+}
+
+@mixin title-style($font-title-size,$font-color) {
+    font-family: $font-title;
+    font-size: $font-title-size;
+    color: $font-color;
+}
+
+.header {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    &__h1 {
+        @include title-style(30px, black);
+        text-align: center;
+        padding: 15px 0 15px 0;
+        background-color: white;
+        filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+    }
+    &__subtitleAndIcon {
+        display: flex;
+        justify-content:center;
+        background-color: $background-color;
+        padding: 20px 0 20px 0;
+        
+        i{
+            color:$main-color;
+            background-color: #EAEAEA ;
+            padding-right: 10px;
+        }
+        p {
+            @include text-style(1rem, 500, $main-color);
+            background-color: $background-color ;
+        }
+    }
+}
+
+.booking {
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__title {
+        @include text-style(24px, 700, black);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    &__text {
+        @include text-style(18px, 300, $main-color);
+        text-align: center;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 20px 0;
+    }
+        &__link--button {
+            @include text-style(16px, 500, #fff);
+            @include button-style;
+        }
+}
+
